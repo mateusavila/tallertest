@@ -1,0 +1,89 @@
+@import "functions"
+// aqui ficam as classes mais usadas por mim nos meus CSSs
+*, *:before, *:after
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+html
+	-webkit-font-smoothing: antialiased
+
+.container
+	width calc(100% - 40px)
+	margin 0 auto
+	position relative
+ul
+	list-style-type none
+	margin 0
+	padding 0
+main
+	clear both
+	height auto
+	width 100%
+	float left
+
+// formulários
+input[type=text], input[type=number], input[type=password], input[type=tel], input[type=email], textarea
+	background #fff
+	width 100%
+	font-size 14px
+	padding 8px 10px
+	placeholderColor(#333, #999)
+// transições para input
+input[type=email], input[type=text], input[type=email]:focus, input[type=text]:focus, textarea, textarea:focus, input[type=number], input[type=number]:focus,  input[type=tel], input[type=tel]:focus, input[type=password], input[type=password]:focus
+	transition all 0.5s
+	border 1px solid #ddd
+input[type=email]:focus, input[type=text]:focus, textarea:focus, input[type=number]:focus, input[type=tel]:focus, input[type=password]:focus
+		border 1px solid #aaa
+
+select
+	appearance none
+	border 1px solid #ddd
+	background-image url('../img/chevron-small-down.svg')
+	background-repeat no-repeat
+	background-position calc(100% - 3px) center
+	padding 5px 40px 5px 5px
+	transitions(.2s)
+	&:invalid
+		color #999
+		transitions(.2s)
+
+textarea
+	resize none
+	height 150px
+input[type=file]
+	font-size 13px
+.hide
+	display none
+.tar
+	text-align right
+.ttu
+	text-transform uppercase
+.ttn
+	text-transform none
+.fwn
+	font-weight normal
+.fwb
+	font-weight bold
+.pull-left
+	float left
+.pull-right
+	float right
+.clb
+	clear both
+.ovh
+	overflow hidden
+.posr
+	position relative
+.tal
+	text-align left
+.tac
+	text-align center
+.hidden
+	opacity 0
+	height 0
+	width 0
+	overflow hidden
+	
+.vat
+	vertical-align top

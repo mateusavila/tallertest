@@ -1,0 +1,601 @@
+@import "normalize"
+@import "functions"
+@import "base"
+
+roboto = 'Roboto Condensed', sans-serif
+html
+	background #f4f4f4
+header
+	font-family roboto
+	background #29292F
+	box()
+	p
+		margin 0
+		line-height 38px
+		color #fff
+		font-weight bold
+		float left
+	img
+		max-width 100px
+		max-height 38px
+		float left
+	.container
+		height 58px
+		padding 10px 0
+.container
+	width 1200px
+.box-user
+	box()
+	background lighten(#29292F, 10%)
+	text-align right
+	p
+		color #fff
+		font-size 13px
+		margin 10px 0
+		font-weight normal
+		a
+			text-decoration none
+			color #D85A4E
+			&:hover
+				border-bottom 1px dotted #D85A4E
+nav
+	float right
+	font-size 0
+	a
+		font-size 16px
+		color #fff
+		text-decoration none
+		padding 8px 15px
+		margin 0 1px
+		background #29292F
+		display inline-block
+		transitions(.2s)
+		will-change background
+		&.active
+			background darken(#29292F, 30%)
+			transitions(.2s)
+			will-change background
+			&:hover
+				background darken(#29292F, 40%)
+				transitions(.2s)
+				will-change background
+		&:hover
+			background lighten(#29292F, 10%)
+			transitions(.2s)
+			will-change background
+		&.logoff
+			background #D4483A
+			transitions(.2s)
+			will-change background
+			&:hover
+				background lighten(#D4483A, 10%)
+				transitions(.2s)
+				will-change background
+main
+	box()
+	font-family roboto
+	position relative
+	.container
+		min-height 100vh
+		color #474747
+		padding 30px 0
+h1
+	vertical-align middle
+	color #666
+	margin 0
+	font-size 30px
+h2
+	font-size 24px
+	margin 0 0 30px
+.tickets-answers
+	box()
+	margin 30px 0 0
+	.tickets-answers-item
+		box()
+		background #fff
+		margin 0 0 10px
+		border 1px solid #dfdfdf
+		&.user-1
+			background #eee
+			.tickets-answers-header, .tickets-answers-files
+				background #e6e6e6
+	.tickets-answers-content
+		padding 5px 10px
+		box()
+		font-size 14px
+		min-height 100px
+		p
+			font-size 14px
+	.tickets-answers-header
+		font-weight bold
+		box()
+		padding 10px
+		margin-bottom 5px
+		background #f6f6f6
+		
+	.tickets-answers-files
+		background #f6f6f6
+		padding 5px 10px
+		box()
+		margin-top 10px
+		font-size 14px
+		a
+			font-size 12px
+			color #333
+			text-decoration none
+			border-bottom 1px dotted #333
+			&:hover
+				border-bottom 1px solid #333
+.tickets-close
+	box()
+	margin 30px 0
+	text-align right
+.tickets-content
+	h2
+		margin 10px 0
+		font-size 26px
+	h3
+		font-size 18px
+		font-weight normal
+		margin 0 0 5px
+.tickets-action
+	h4
+		margin 0 0 10px
+	.btn.gray
+		font-size 14px
+		display inline-block
+		vertical-align middle
+		margin-left 10px
+.ticket-action-item
+	display inline-block
+	vertical-align top
+	margin-right 20px
+	font-size 0
+	label
+		font-size 14px
+		display inline-block
+		vertical-align middle
+	select, button
+		display inline-block
+		vertical-align middle
+		font-size 14px
+		margin-left 5px
+.login
+	width 300px
+	display inline-block
+	font-size 0
+	font-family roboto
+	centerPerfect()
+	padding 20px
+	text-align center
+	background #29292F
+	img
+		max-height 100px
+		margin 0 0 20px
+	h2
+		text-transform uppercase
+		font-size 18px
+		margin 0 0 20px
+		font-weight 100
+		color #666
+	input
+		font-size 14px
+		width 100%
+		background #fff
+		margin-bottom 5px
+		border-color #ccc
+		&:focus
+			border-color #888
+	button
+		font-size 14px
+		background #4CA143
+		display block
+		border none
+		color #fff
+		height 37px
+		margin-top 10px
+		width 100%
+		font-weight bold
+		text-transform uppercase
+		transitions(.2s)
+		&[disabled]
+			background darken(#29292F, 15%)
+			&:hover
+				background darken(#29292F, 25%)
+		&:hover
+			background darken(#4CA143, 10%)
+			transitions(.2s)
+	.login-error-area
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 0
+		background error1
+		padding 24px
+		background #D4483A
+		color #fff
+		overflow hidden
+		opacity 0
+		transitions(.3s)
+		&.active
+			opacity 1
+			transitions(.3s)
+			height 100%
+		h2
+			margin 0 0 12px
+			color #fff
+		p
+			color #fff
+			font-size 14px
+			margin 0 0 6px
+		.cancel
+			margin 30px auto 0
+			display block
+.mask
+	filler()
+	background rgba(0,0,0,0.8)
+	position fixed
+	opacity 0
+	transitions(.2s, opacity)
+	will-change opacity
+	z-index -1
+	&.active
+		opacity 1
+		transitions(.2s, opacity)
+		will-change opacity
+		z-index 100
+.window
+	width 800px
+	centerPerfect()
+	top 50px
+	transform translate(-50%, 0)
+	transitions(.2s, opacity)
+	will-change opacity
+	z-index -1
+	border-radius 3px
+	opacity 0
+	margin-bottom 50px
+	&.small
+		width 320px
+		centerPerfect()
+		position fixed
+	&.active
+		opacity 1
+		transitions(.2s, opacity)
+		will-change opacity
+		z-index 101
+	.close
+		position absolute
+		top -20px
+		background #D44637
+		right -20px
+		font-size 36px
+		line-height 30px
+		width 32px
+		font-weight 300
+		text-align center
+		border-radius 100%
+		height 32px
+		cursor pointer
+		color #fff
+		will-change background
+		transitions(.2s)
+		&:hover
+			background darken(#D44637, 10%)
+			will-change background
+			transitions(.2s)
+	.window-content
+		border-radius 3px
+		background #fff
+		padding 20px
+		font-family roboto
+		margin-bottom 50px
+		z-index 10
+		.field-half
+			width calc(50% - 10px)
+			&.pull-left
+				float left
+			&.pull-right
+				float right
+		.button-area
+			text-align right
+			&.choose
+				margin 30px 0 0
+				text-align center
+			&.result
+				text-align center
+				background #27AE60
+				padding 5px 10px
+				color #fff
+				margin 10px 0
+				p
+					color #fff
+					margin 0
+					text-transform uppercase
+					font-size 16px
+		button
+			display inline-block
+			border none
+		h2
+			margin 0 0 20px
+			font-size 20px
+			color #666
+			font-weight bold
+			text-transform uppercase
+			border-bottom 1px dotted #ccc
+		p
+			margin 0 0 6px
+			font-size 14px
+			color #474747
+.create-ticket
+	box()
+.action-button
+	box()
+	margin 20px 0
+.tickets-table-loading, .ticket-loading
+	min-height 200px
+	opacity 0
+	z-index -1
+	transitions(.2s)
+	will-change opacity
+	filler()
+	background #fff
+	overflow hidden
+	min-height 100px
+	img
+		centerPerfect()
+		width 80px
+	&.active
+		z-index 1100
+		transitions(.2s)
+		will-change opacity
+		opacity 1
+
+
+.status-0
+	color #16a085
+.status-1
+	color #f39c12
+.status-2
+	color #e67e22
+.ticket-loading
+	min-height 100%
+.tickets-table
+	box()
+	margin 10px 0
+	table
+		font-family roboto
+		font-size 14px
+		width 100%
+		min-width 1000px
+	thead
+		background #474747
+		color #fff
+		th
+			padding 8px
+			cursor pointer
+			border 1px solid #363636
+			font-size 11px
+			text-transform uppercase
+			transitions(.2s)
+			background-color #474747
+			position relative
+			&::after
+				content ''
+				background-image url('../img/caret-up.svg')
+				background-repeat no-repeat
+				height 6px
+				width 12px
+				background-position center center
+				position absolute
+				top 50%
+				transform translateY(-50%)
+				right 5px
+				margin-top -1px
+				opacity 0
+			&.active::after
+				opacity 1
+				background-image url('../img/caret-down.svg')
+			&.active.reverse::after
+				background-image url('../img/caret-up.svg')
+				opacity 1
+			&.active
+				background-color #383838
+				&:hover
+					background-color #323232
+			&:hover
+				background-color #383838
+				transitions(.2s)
+	tbody tr
+		background #fafafa
+		&:hover
+			background #fff
+		&:nth-child(even)
+			background #ededed
+			&:hover
+				background #fff
+		&.inactive
+			td.td1
+				opacity .6
+				text-decoration line-through
+	td
+		padding 6px
+		border 1px solid #ddd
+		color #474747
+		&.done
+			color #27ae60
+		&.waiting
+			color #d35400
+		&.open
+			color #f39c12
+		&.td1
+			text-align left
+		&.td2
+			text-align center
+		a
+			color #373737
+			text-decoration none
+			border-bottom 1px dotted #373737
+			&:hover
+				border-bottom 1px solid #373737
+	tfoot
+		background #eee
+		td
+			color #474747
+			font-weight bold
+			font-size 14px
+.hiperlink
+	cursor pointer
+	&:hover
+		text-decoration underline
+.tickets-paginate
+	box()
+	margin 30px 0
+	text-align center
+.btn-area
+	box()
+	margin-bottom 30px
+.btn
+	padding 7px 10px
+	color #fff
+	cursor pointer
+	border none
+	text-decoration none
+	border-radius 3px
+	&.big
+		padding 8px 15px
+	&.gray
+		transitions(.2s)
+		background #ccc
+		&:hover
+			background #bbb
+			transitions(.2s)
+	&.success
+		background #2ecc71
+		transitions(.2s)
+		&:hover
+			background #27ae60
+			transitions(.2s)
+	&.warning
+		background #D85A4E
+		transitions(.2s)
+		&:hover
+			background darken(#D85A4E, 10%)
+			transitions(.2s)
+	&.status
+		background #0CC1D3
+		transitions(.2s)
+		&.inactive
+			background #ddd
+			transitions(.2s)
+			&:hover
+				background #ccc
+				transitions(.2s)
+		&:hover
+			background darken(#0CC1D3, 10%)
+			transitions(.2s)
+	&[disabled=disabled], &.big[disabled=disabled]
+		background #ddd
+		transitions(.2s)
+		&:hover
+			background #eee
+			transitions(.2s)
+footer
+	background #212121
+	box()
+	p
+		color #888
+		font-size 13px
+		font-weight 300
+		font-family roboto
+fieldset
+	border 1px solid #dfdfdf
+	padding 10px
+	margin 0 0 20px
+	background #fefefe
+	legend
+		text-transform uppercase
+		font-size 20px
+		font-weight 300
+		color #989898
+
+.create-ticket
+	box()
+	margin-top 30px
+.create-ticket-box
+	box()
+	margin-bottom 10px
+	label
+		color #777
+		font-size 14px
+		box()
+	select
+		width 250px
+		font-size 14px
+		padding 5px 8px
+		margin-top 2px
+@media all and (max-width: 1250px)
+	.container
+		width calc(100% - 40px)
+
+@media all and (max-width: 1100px)
+	.tickets-table
+		width 100%
+		overflow auto
+		padding-bottom 40px
+
+@media all and (max-width: 750px)
+	.container
+		width calc(100% - 20px)
+	h1
+		font-size 24px
+	h2
+		font-size 19px
+	.tickets-content 
+		h2
+			font-size 19px
+		h3
+			font-size 15px
+	.tickets-answers .tickets-answers-header
+		font-size 15px
+	.tickets-action 
+		h4
+			font-size 15px
+	.ticket-action-item
+		width 100%
+		display block
+		margin-bottom 5px
+		&.ticket-action-item-send
+			text-align right
+		label
+			width 60px
+			text-align right
+		select
+			width calc(100% - 65px)
+@media all and (max-width: 550px)
+	.create-ticket-box 
+		select
+			width 100%
+	.create-ticket-box-upload
+		input
+			width 100%
+	.logo-area
+		display block
+		width 100%
+		text-align center
+		img
+			display inline-block
+			vertical-align middle
+			float none
+		p
+			display inline-block
+			vertical-align middle
+			float none
+	nav
+		display block
+		width 100%
+		margin 10px 0 20px
+		text-align center
+	footer
+		text-align center

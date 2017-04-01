@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^ticket/([0-9]+)/?$ index.php?link=ticket&id=$1 
+RewriteRule ^ticket/([a-zA-Z0-9-/]+)/?$ index.php?link=ticket-error 
+RewriteRule ^ticket/?$ index.php?link=ticket-error 
+RewriteRule ^([a-zA-Z0-9-/]+)$ index.php?link=$1
+RewriteRule ^([a-zA-Z0-9-/]+)/$ index.php?link=$1

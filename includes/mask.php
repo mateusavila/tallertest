@@ -1,0 +1,1 @@
+<div class="mask" ng-class="{'active': form.open || deletebox.open || form.success || closeticket.confirm}"></div>
